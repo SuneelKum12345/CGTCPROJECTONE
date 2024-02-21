@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    content="width="device-width,
+    initial-scale=1.0">
+    <style>
+        body { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #digital-watch {
+            font-size: 2em;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Coming Soon</h1>
-    <h1>hello world on github chennal</h1>
+    <div id="digital-watch"></div>
+    <script>
+        function updateDigitalWatch() {
+            const now = new Date();
+            const hours = 
+            now.getHours().toString().padStart(2
+            , '0');
+            const minutes =
+            now.getMinutes().toString().padStart
+            (2, '0');
+            const seconds =
+            now.getSeconds().toString().padStart
+            (2, '0')
+            const digitalWatch.textContent = '$ {hours}:${minutes}:${seconds}';
+            }
 
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, unde.</h1>
-<h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi explicabo consequuntur cum atque aspernatur sed in quaerat illo vel provident necessitatibus delectus praesentium, magni esse ratione? Corrupti, doloribus. Consequuntur, saepe?</h1>
-</body>
-</html>
+            setInterval(updateDigitalWatch, 1000);
+            updateDigitalWatch(); // Initial update
+            </script>
+            </body>
+            </html>
