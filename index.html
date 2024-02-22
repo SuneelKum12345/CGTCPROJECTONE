@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    content="width="device-width,
+    <meta name="viewport" 
+    content="width=device-width, 
     initial-scale=1.0">
-    <style>
+        <style>
         body { 
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, 
+        sans-serif;
             background-color: #f0f0f0;
         }
         #digital-watch {
@@ -24,22 +24,20 @@
 </head>
 <body>
     <div id="digital-watch"></div>
+    
     <script>
         function updateDigitalWatch() {
             const now = new Date();
-            const hours = 
-            now.getHours().toString().padStart(2
+            const hours = now.getHours().toString().padStart(2
             , '0');
-            const minutes =
-            now.getMinutes().toString().padStart
+            const minutes = now.getMinutes().toString().padStart
             (2, '0');
-            const seconds =
-            now.getSeconds().toString().padStart
+            const seconds = now.getSeconds().toString().padStart
             (2, '0')
-            const digitalWatch.textContent = '$ {hours}:${minutes}:${seconds}';
-            }
-
-            setInterval(updateDigitalWatch, 1000);
+            const digitalWatch = document.getElementById('digital-watch');
+                  digitalWatch.textContent = '${hours}: ${minutes}: ${seconds};}
+                  
+                  setInterval(updateDigitalWatch,1000);
             updateDigitalWatch(); // Initial update
             </script>
             </body>
